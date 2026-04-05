@@ -28,7 +28,7 @@ let temps = [33,35, 32, 25, 24,26];
 
 // sir example
 
-// let marks = [2,3,4,5,6];
+ let marks = [7,3,4,5,6];
 // let mappedArr = marks.map(x => {
 //     x = x*x;
 //     x+2;
@@ -50,3 +50,35 @@ let temps = [33,35, 32, 25, 24,26];
 
 //=================================================
 
+
+// deep  copy of array can be made using map , because map foncyion creates a new array
+//it does not modify the original array . Memory will have to diffeent referne of that respective array.
+
+// let marks = [60, 30, 55, 40,90]
+// let marksArr = marks.map(x => x>50 ? "greater" : "lesser" );
+// console.log(marksArr)
+
+// =================================================
+
+
+// let passArr = marks.map((x) => {
+//     if(x>5) {
+
+//         return x
+//     } 
+
+// })
+
+// console.log(passArr)
+
+
+
+//output
+//[ 7, undefined, undefined, undefined, 6 ]
+
+// if condtion true value will be written if false undefine will be return 
+
+
+// map function limition is that if you some output after applying any condition it 
+// it is not possible we will have to use filter method it return an array that inludes element that meet 
+// the condition and skip element that fails to meet the condition.
