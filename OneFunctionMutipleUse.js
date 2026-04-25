@@ -5,24 +5,15 @@ function App(){
   const [marks,setMarks] = useState([3,4,5,6,7,8]);
   
   
-  function increment(x){
+  function update(x,dx){
     
     const copyMarks =[...marks]
-    copyMarks[x]++
+    copyMarks[x]=copyMarks[x]+dx
     setMarks(copyMarks)
     
     
   }
   
-  
-    function decrement(x){
-    
-    const copyMarks =[...marks]
-    copyMarks[x]--
-    setMarks(copyMarks)
-    
-    
-  }
   
   return(
     
@@ -36,10 +27,10 @@ function App(){
         marks.map((m, i)=>(
         <li key={i} style ={{display:"flex",justifyContent:"center",gap:"10px",margin:"10px"}}>
           
-          <button onClick= {() => increment(i)}>+</button>
+          <button onClick= {() => update(i,1)}>+</button>
           {m}
           
-          <button onClick={()=> decrement(i)}>-</button>
+          <button onClick={()=> update(i,-1)}>-</button>
           
           
         </li>
