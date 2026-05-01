@@ -66,3 +66,50 @@ function multiplyNumeric(obj){
 // obj.height = obj.height * 2;
 // ```
 // But this approach is not dynamic and only works for objects with known property names.
+
+
+//Create an object calculator with three methods
+
+let Calculator ={
+   
+  read(){
+    this.a = +prompt('a?', 0)
+    this.b = +prompt('b?', 0)
+  },
+  sum(){
+    return this.a + this.b;
+  },
+  mul(){
+    return this.a* this.b
+  }
+
+
+}
+
+Calculator.read();
+alert( Calculator.sum() );
+alert( Calculator.mul() );
+
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+  }
+};
+
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep(); // 1
+// ladder.down();
+// ladder.showStep(); // 0
+
+//Modify the code of up, down, and showStep to make the calls chainable, like this:
+//ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
